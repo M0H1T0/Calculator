@@ -32,7 +32,14 @@ def Calc():
 
         if user_say == "help":
 
-            print("print('A + B — сумма\nA - B — разность\nA * B — произведение\nA / B — частное\nA ** B — возведение в степень\nA // B — целочисленное деление\nA % B — остаток от деления.')")
+            print(
+                "print('A + B — сумма"
+                "A - B — разность"
+                "A * B — произведение"
+                "A / B — частное"
+                "A ** B — возведение в степень"
+                "A // B — целочисленное деление"
+                "A % B — остаток от деления.')")
 
             ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
@@ -55,7 +62,6 @@ def Calc():
                 import time
                 time.sleep(5)
                 break
-
 
 
 def Square():
@@ -85,6 +91,7 @@ def Square():
             import time
             time.sleep(5)
             break
+
 
 def Volume():
     while True:
@@ -121,7 +128,7 @@ def Volume():
         if Vex == 'c' or Vex == 'C':
             cube = input('Введите сторону куба: ')
             vcube = float(cube) ** 3
-            print ('Oбьём вашего куба равен: ' +str(vcube))
+            print('Oбьём вашего куба равен: ' + str(vcube))
             ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
         if ex == 'e' or ex == 'E' or ex == 'е' or ex == 'Е':
@@ -144,6 +151,7 @@ def Volume():
             time.sleep(5)
             break
 
+
 def MainMenu():
     print("Функции которые вам доступны:\nКалькулятор(с)\nПлощадь(s)\nОбьём(v)")
     function = input("Введите букву функции которая вам нужна:\n")
@@ -156,5 +164,6 @@ def MainMenu():
 
     if function == "v" or function == "V":
         Volume()
+
 
 MainMenu()
