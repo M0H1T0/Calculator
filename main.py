@@ -1,4 +1,5 @@
-def Calc():
+def calculator():
+    global example_for_calc
     while True:
         print("Вы можете начать работу с калькулятором(calc) Или посмотреть действия(help)")
         user_say = input("")
@@ -8,20 +9,20 @@ def Calc():
             calc = input("Введите математическое действие:\n")
             print("Ответ: " + str(eval(calc)))
 
-            ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
+            example_for_calc = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
-            if ex == 'e' or ex == 'E' or ex == 'е' or ex == 'Е':
+            if example_for_calc == 'e' or example_for_calc == 'E' or example_for_calc == 'е' or example_for_calc == 'Е':
                 print('Программа закроется через 5 секунд!!!')
                 import time
                 time.sleep(5)
                 break
 
-            if ex == 'c' or ex == 'C' or ex == 'с' or ex == 'С':
+            if example_for_calc == 'c' or example_for_calc == 'C' or example_for_calc == 'с' or example_for_calc == 'С':
                 print('Нажмите Enter чтобы продолжить!')
-                Calc()
+                calculator()
 
-            if ex == 'm' or ex == 'M' or ex == 'м' or ex == 'М':
-                MainMenu()
+            if example_for_calc == 'm' or example_for_calc == 'M' or example_for_calc == 'м' or example_for_calc == 'М':
+                main_menu()
 
             else:
                 print('Ты что за ахинею написал. Программа отказывается это делать!!!')
@@ -41,20 +42,20 @@ def Calc():
                 "A // B — целочисленное деление"
                 "A % B — остаток от деления.')")
 
-            ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
+            user_action = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
-            if ex == 'e' or ex == 'E' or ex == 'е' or ex == 'Е':
+            if user_action == 'e' or user_action == 'E' or user_action == 'е' or user_action == 'Е':
                 print('Программа закроется через 5 секунд!!!')
                 import time
                 time.sleep(5)
                 break
 
-            if ex == 'c' or ex == 'C' or ex == 'с' or ex == 'С':
+            if example_for_calc == 'c' or example_for_calc == 'C' or example_for_calc == 'с' or example_for_calc == 'С':
                 print('Нажмите Enter чтобы продолжить!')
-                Calc()
+                calculator()
 
-            if ex == 'm' or ex == 'M' or ex == 'м' or ex == 'М':
-                MainMenu()
+            if example_for_calc == 'm' or example_for_calc == 'M' or example_for_calc == 'м' or example_for_calc == 'М':
+                main_menu()
 
             else:
                 print('Ты что за ахинею написал. Программа отказывается это делать!!!')
@@ -64,26 +65,26 @@ def Calc():
                 break
 
 
-def Square():
+def function_square():
     while True:
         import math
-        R = float(input('Введите радиус круга:\n'))
-        S = math.pi * R * R
-        print('Площадь круга:', S)
-        ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
+        r_of_round = float(input('Введите радиус круга:\n'))
+        square = math.pi * r_of_round * r_of_round
+        print('Площадь круга:', square)
+        example = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
-        if ex == 'e' or ex == 'E' or ex == 'е' or ex == 'Е':
+        if example == 'e' or example == 'E' or example == 'е' or example == 'Е':
             print('Программа закроется через 5 секунд!!!')
             import time
             time.sleep(5)
             break
 
-        if ex == 'c' or ex == 'C' or ex == 'с' or ex == 'С':
+        if example == 'c' or example == 'C' or example == 'с' or example == 'С':
             print('Нажмите Enter чтобы продолжить!')
-            Square()
+            function_square()
 
-        if ex == 'm' or ex == 'M' or ex == 'м' or ex == 'м':
-            MainMenu()
+        if example == 'm' or example == 'M' or example == 'м' or example == 'м':
+            main_menu()
 
         else:
             print('Ты что за ахинею написал. Программа отказывается это делать!!!')
@@ -93,30 +94,31 @@ def Square():
             break
 
 
-def Volume():
+def volume():
+    global user_action
     while True:
-        Vex = input('Обьём квадрата(С), или обьём параллелепипеда(P):\n')
+        volume_example = input('Обьём квадрата(С), или обьём параллелепипеда(P):\n')
 
-        if Vex == 'P' or Vex == 'p':
+        if volume_example == 'P' or volume_example == 'p':
             x = input('Введите высоту:\n')
             y = input('Введите ширину:\n')
             z = input('Введите глубину:\n')
             f = float(x) * float(y) * float(z)
             print('Результат ' + str(f))
-            ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
+            user_action = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
-            if ex == 'e' or ex == 'E' or ex == 'е' or ex == 'Е':
+            if user_action == 'e' or user_action == 'E' or user_action == 'е' or user_action == 'Е':
                 print('Программа закроется через 5 секунд!!!')
                 import time
                 time.sleep(5)
                 break
 
-            if ex == 'c' or ex == 'C' or ex == 'с' or ex == 'С':
+            if user_action == 'c' or user_action == 'C' or user_action == 'с' or user_action == 'С':
                 print('Нажмите Enter чтобы продолжить!')
-                Volume()
+                volume()
 
-            if ex == 'm' or ex == 'M' or ex == 'м' or ex == 'м':
-                MainMenu()
+            if user_action == 'm' or user_action == 'M' or user_action == 'м' or user_action == 'м':
+                main_menu()
 
             else:
                 print('Ты что за ахинею написал. Программа отказывается это делать!!!')
@@ -125,24 +127,24 @@ def Volume():
                 time.sleep(5)
                 break
 
-        if Vex == 'c' or Vex == 'C':
+        if volume_example == 'c' or volume_example == 'C':
             cube = input('Введите сторону куба: ')
             vcube = float(cube) ** 3
             print('Oбьём вашего куба равен: ' + str(vcube))
-            ex = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
+            user_action = input('Хотите продолжить(c), выйти в меню(m), закрыть программу(e)?:\n')
 
-        if ex == 'e' or ex == 'E' or ex == 'е' or ex == 'Е':
+        if 'e' == user_action or user_action == 'E' or user_action == 'е' or user_action == 'Е':
             print('Программа закроется через 5 секунд!!!')
             import time
             time.sleep(5)
             break
 
-        if ex == 'c' or ex == 'C' or ex == 'с' or ex == 'С':
+        if user_action == 'c' or user_action == 'C' or user_action == 'с' or user_action == 'С':
             print('Нажмите Enter чтобы продолжить!')
-            Volume()
+            volume()
 
-        if ex == 'm' or ex == 'M' or ex == 'м' or ex == 'М':
-            MainMenu()
+        if user_action == 'm' or user_action == 'M' or user_action == 'м' or user_action == 'М':
+            main_menu()
 
         else:
             print('Ты что за ахинею написал. Программа отказывается это делать!!!')
@@ -152,18 +154,18 @@ def Volume():
             break
 
 
-def MainMenu():
+def main_menu():
     print("Функции которые вам доступны:\nКалькулятор(с)\nПлощадь(s)\nОбьём(v)")
     function = input("Введите букву функции которая вам нужна:\n")
 
     if function == "c" or function == "C":
-        Calc()
+        calculator()
 
     if function == "s" or function == "S":
-        Square()
+        function_square()
 
     if function == "v" or function == "V":
-        Volume()
+        volume()
 
 
-MainMenu()
+main_menu()
